@@ -1,0 +1,4 @@
+class Solution:
+    def countConsistentStrings(self, allowed: str, words: List[str]) -> int:
+        allow = set(allowed)
+        return sum(all(ch in allow for ch in w) for w in words)
